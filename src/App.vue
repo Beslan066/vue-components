@@ -1,26 +1,47 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
+
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TestComponent from './components/TestComponent.vue'
+import CounterComponent from './components/CounterComponent.vue'
+import ComputedComponent from './components/ComputedComponent.vue'
+import SeacrhList from './components/SeacrhListComponent.vue'
+
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TestComponent, 
+    CounterComponent,
+    ComputedComponent,
+    SeacrhList
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+<template>
+  <div class="container">
+    <test-component/>
+    <CounterComponent/>
+    <ComputedComponent/>
+    <seacrh-list/>
+  </div>
+</template>
+
+<style scoped>
+  .container {
+    margin: 0 auto;
+    width: 700px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+  }
+
+  span {
+    color: black;
+  }
 </style>
+
